@@ -8,7 +8,6 @@ from .models import Post
 # Create your views here.
 class PostListView(ListView):
      model = Post
-
 class PostCreateView(CreateView):
      model = Post
      fields = "__all__"
