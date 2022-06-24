@@ -7,24 +7,24 @@ from .models import Post
 
 # Create your views here.
 class PostListView(ListView):
-    model = Post
+     model = Post
 
 class PostCreateView(CreateView):
-    model = Post
-    fields = "__all__ "
-    success_url  = reverse_lazy("blog:all")
+     model = Post
+     fields = "__all__"
+     success_url  = reverse_lazy("blog:all")
 
 class PostDetailView(DetailView):
-    model = Post
-    fields = "__all__ "
-    success_url  = reverse_lazy("blog:all")
+     model = Post
+     fields = "__all__"
+     success_url  = reverse_lazy("blog:all")
 
 class PostUpdateView(UpdateView):
-    model = Post
-    fields = "__all__ "
-    success_url  = reverse_lazy("blog:all")
+     model = Post
+     fields = "__all__"
+     success_url  = reverse_lazy("blog:all")
 # this PostDeleteView check the success_url  = reverse_lazy(" ")
 
 class PostDeleteView(DeleteView):
     model = Post
-    success_url  = reverse_lazy(" ")
+    success_url  = reverse_lazy("blog:all")
